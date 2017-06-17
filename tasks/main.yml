@@ -1,0 +1,26 @@
+---
+- name: install necessary packages
+  yum:
+    name: "{{ item }}"
+    state: installed
+  become: yes
+  with_items:
+    - memcached
+    - python-memcached
+
+- name: set memcached listen address
+  lineinfile:
+    dest: /etc/sysconfig/memcached
+    line: OPTIONS="-l 127.0.0.1,::1,{{ openstack_memcached.listen_addr }}"
+    regexp: ^#?OPTIONS=".*"
+  become: yes
+  notify:
+    - restart memcached
+
+- name: set memcached service enabled and started
+  service:
+    name: memcached
+    state: started
+    enabled: yes
+  become: yes
+

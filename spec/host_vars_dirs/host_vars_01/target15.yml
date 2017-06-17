@@ -1,0 +1,3 @@
+openstack_memcached:
+  listen_addr: 192.168.1.115
+
