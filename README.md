@@ -30,7 +30,7 @@ openstack_memcached:
 ```
 
 ## Dependencies
-None
+- [bbrfkr.openstack_common](https://galaxy.ansible.com/bbrfkr/openstack_common/)
 
 ## Build status
 |branch|status|
@@ -41,7 +41,7 @@ None
 ## Retest
 This role is tested by serverspec, then its test codes are included in repository. Users can retest this role by using the test codes. To retest this role, follow the steps described below.
 
-1. Prepare targets (Here, targets ip are X.X.X.X, Y.Y.Y.Y)
+1. Prepare 2 targets (Here, targets ip are X.X.X.X, Y.Y.Y.Y)
 2. Install serverspec in local machine
 3. Modify spec/inventory.yml
 ```
