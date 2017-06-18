@@ -30,7 +30,7 @@ openstack_memcached:
 ```
 
 ## Dependencies
-- bbrfkr.openstack_common
+- [bbrfkr.openstack_common](https://galaxy.ansible.com/bbrfkr/openstack_common/)
 
 ## Build status
 |branch|status|
